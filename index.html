@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteric</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+<style>
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+table td img {
+    max-width: 100%; /* Adjust the value to control the image width */
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+
+.button {
+  display: inline-block;
+  padding: 1px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #b151e5;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px #999;
+}
+
+.button:hover {
+  background-color: #653e8e;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+<body>
+<h1 align="center" style="color:#b151e5;">Asterisc institute</h1>
+<h2 align="center" style="color:#000000;">Course List</h2>
+
+<table id="courseTable">
+    <thead>
+        <tr>
+            <th scope="col" bgcolor="#b151e5">Sr.</th>
+            <th scope="col" bgcolor="#b151e5">Image</th>
+            <th scope="col" bgcolor="#b151e5">Course</th>
+            <th scope="col" bgcolor="#b151e5">Duration</th>
+            <th scope="col" bgcolor="#b151e5">Course Details</th>
+            <th scope="col" bgcolor="#b151e5">Fees</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<!-- JavaScript code -->
+<script>
+// Function to fetch JSON data and populate the table
+function populateTable() {
+  fetch('courses.json') // Replace 'courses.json' with the path to your JSON file
+    .then(response => response.json())
+    .then(data => {
+      const tableBody = document.getElementById('tableBody');
+
+      data.forEach(course => {
+        const row = tableBody.insertRow();
+
+        // Create table cells and populate with data
+        const serialCell = row.insertCell(0);
+        serialCell.textContent = course["Sr."];
+        serialCell.className = "old-table-class"; // Add your existing table class
+        serialCell.setAttribute('data-label', 'Sr.');
+
+        const imageCell = row.insertCell(1);
+        const image = document.createElement('img');
+        image.src = course["Image"];
+        imageCell.appendChild(image);
+        imageCell.className = "old-table-class"; // Add your existing table class
+        imageCell.setAttribute('data-label', '');
+
+        const courseCell = row.insertCell(2);
+        courseCell.textContent = course["Course"];
+        courseCell.className = "old-table-class"; // Add your existing table class
+        courseCell.setAttribute('data-label', 'Course');
+
+        const durationCell = row.insertCell(3);
+        durationCell.textContent = course["Duration"];
+        durationCell.className = "old-table-class"; // Add your existing table class
+        durationCell.setAttribute('data-label', 'Duration');
+
+        const courseDetailsCell = row.insertCell(4);
+        const courseDetailsLink = document.createElement('a');
+        courseDetailsLink.href = course["CourseDetailsLink"];
+        courseDetailsLink.textContent = "Download";
+        courseDetailsLink.className = "button"; // Add the button class
+        courseDetailsCell.appendChild(courseDetailsLink);
+        courseDetailsCell.setAttribute('data-label', 'Course Details');
+
+
+        const feesCell = row.insertCell(5);
+        const feesLink = document.createElement('a');
+        feesLink.href = course["FeesDetailsLink"];
+        feesLink.textContent = "Fees Details";
+        feesLink.className = "button"; // Add the button class
+        feesCell.appendChild(feesLink);
+        feesCell.setAttribute('data-label', 'Fees'); // Add data-label attribute
+
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching data: ', error);
+    });
+}
+
+// Call the function to populate the table when the page loads
+populateTable();
+
+</script>
+</body>
+</html>
