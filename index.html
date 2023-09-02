@@ -191,7 +191,8 @@ function populateTable() {
 
         const feesCell = row.insertCell(5);
         const feesLink = document.createElement('a');
-        feesLink.href = course["FeesDetailsLink"];
+        // feesLink.href = course["FeesDetailsLink"];
+        feesLink.href = `https://wa.me/+917744822228?text=${encodeURIComponent(course["FeesDetailsText"])}`;
         feesLink.textContent = "Fees Details";
         feesLink.className = "button"; // Add the button class
         feesCell.appendChild(feesLink);

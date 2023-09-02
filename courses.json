@@ -5,7 +5,7 @@
       "Course": "C language",
       "Duration": "1.5 to 2 Months",
       "CourseDetailsLink": "https://docs.google.com/document/d/1QWmIS6_NGKXDvoX9J4jf1Vu7GPIvGA8_/edit?usp=share_link&ouid=117125690467146315904&rtpof=true&sd=true",
-      "FeesDetailsLink": "https://wa.me/+917744822228?text=Hi%20enquiry%20for%20C%20language!"
+      "FeesDetailsLink": "Hi enquiry for C language!"
     },
     {
       "Sr.": "2",
@@ -13,7 +13,150 @@
       "Course": "C++",
       "Duration": "1.5 to 2 Months",
       "CourseDetailsLink": "https://docs.google.com/document/d/1QWmIS6_NGKXDvoX9J4jf1Vu7GPIvGA8_/edit?usp=share_link&ouid=117125690467146315904&rtpof=true&sd=true",
-      "FeesDetailsLink": "https://wa.me/+917744822228?text=Hi%20enquiry%20for%20Cpp!"
+      "FeesDetailsLink": "Hi enquiry for C++ language!"
+    },
+    {
+      "Sr.": "3",
+      "Image": "IMG/HTML-Logo.png",
+      "Course": "HTML and CSS",
+      "Duration": "1 month",
+      "CourseDetailsLink": "https://www.freecodecamp.org/learn/responsive-web-design/",
+      "FeesDetailsLink": "Hi enquiry for HTML and CSS!"
+    },
+    {
+      "Sr.": "4",
+      "Image": "IMG/Java-Logo.jpg",
+      "Course": "Java",
+      "Duration": "6 months",
+      "CourseDetailsLink": "https://www.edx.org/course/introduction-to-java-programming-2",
+      "FeesDetailsLink": "Hi enquiry for Java!"
+    },
+    {
+      "Sr.": "5",
+      "Image": "C-Plus-Plus-Logo.png",
+      "Course": "C++",
+      "Duration": "1 year",
+      "CourseDetailsLink": "https://www.pluralsight.com/courses/c-plus-plus-fundamentals",
+      "FeesDetailsLink": "Hi enquiry for C++!"
+    },
+    {
+      "Sr.": "6",
+      "Image": "IMG/Ruby-Logo.png",
+      "Course": "Ruby",
+      "Duration": "3 months",
+      "CourseDetailsLink": "https://www.udacity.com/course/ruby-on-rails--ud386",
+      "FeesDetailsLink": "Hi enquiry for Ruby!"
+    },
+    {
+      "Sr.": "7",
+      "Image": "IMG/Swift-Logo.png",
+      "Course": "Swift",
+      "Duration": "2 months",
+      "CourseDetailsLink": "https://www.raywenderlich.com/182079/swift-tutorial-intro",
+      "FeesDetailsLink": "Hi enquiry for Swift!"
+    },
+    {
+      "Sr.": "8",
+      "Image": "IMG/Kotlin-Logo.png",
+      "Course": "Kotlin",
+      "Duration": "1 month",
+      "CourseDetailsLink": "https://www.jetbrains.com/academy/learn/kotlin/",
+      "FeesDetailsLink": "Hi enquiry for Kotlin!"
+    },
+    {
+      "Sr.": "9",
+      "Image": "IMG/R-Logo.png",
+      "Course": "R",
+      "Duration": "3 months",
+      "CourseDetailsLink": "https://www.coursera.org/specializations/r",
+      "FeesDetailsLink": "Hi enquiry for R!"
+    },
+    {
+      "Sr.": "10",
+      "Image": "IMG/SQL-Logo.png",
+      "Course": "SQL",
+      "Duration": "2 months",
+      "CourseDetailsLink": "https://www.udemy.com/course/the-complete-sql-bootcamp-2023-master-sql/",
+      "FeesDetailsLink": "Hi enquiry for SQL!"
+    },
+    {
+      "Sr.": "11",
+      "Image": "IMG/C-Sharp-Logo.png",
+      "Course": "C#",
+      "Duration": "1 month",
+      "CourseDetailsLink": "https://www.pluralsight.com/courses/c-sharp-fundamentals",
+      "FeesDetailsLink": "Hi enquiry for SQL!"
+    },{
+      "Sr.": "12",
+      "Image": "IMG/Go-Logo.png",
+      "Course": "Go",
+      "Duration": "3 months",
+      "CourseDetailsLink": "https://www.coursera.org/specializations/go",
+      "FeesDetailsLink": "Hi enquiry for Go!"
+    },
+    {
+      "Sr.": "13",
+      "Image": "IMG/Rust-Logo.png",
+      "Course": "Rust",
+      "Duration": "2 months",
+      "CourseDetailsLink": "https://www.udemy.com/course/the-complete-rust-programming-course/",
+      "FeesDetailsLink": "Hi enquiry for Rust!"
+    },
+    {
+      "Sr.": "14",
+      "Image": "IMG/PHP-Logo.png",
+      "Course": "PHP",
+      "Duration": "1 month",
+      "CourseDetailsLink": "https://www.freecodecamp.org/learn/php-and-laravel/",
+      "FeesDetailsLink": "Hi enquiry for PHP!"
+    },
+    {
+      "Sr.": "15",
+      "Image": "IMG/Laravel-Logo.png",
+      "Course": "Laravel",
+      "Duration": "3 months",
+      "CourseDetailsLink": "https://www.udemy.com/course/laravel-8-tutorial-for-beginners/",
+      "FeesDetailsLink": "Hi enquiry for Laravel!"
+    },
+    {
+      "Sr.": "16",
+      "Image": "IMG/Vue-JS-Logo.png",
+      "Course": "Vue.js",
+      "Duration": "2 months",
+      "CourseDetailsLink": "https://www.udemy.com/course/vue-3-the-complete-guide-2023/",
+      "FeesDetailsLink": "Hi enquiry for Vue.js!"
+    },
+    {
+      "Sr.": "17",
+      "Image": "IMG/Angular-Logo.png",
+      "Course": "Angular",
+      "Duration": "1 month",
+      "CourseDetailsLink": "https://www.freecodecamp.org/learn/angular/",
+      "FeesDetailsLink": "Hi enquiry for Angular!"
+    },
+    {
+      "Sr.": "18",
+      "Image": "IMG/React-Logo.png",
+      "Course": "React",
+      "Duration": "3 months",
+      "CourseDetailsLink": "https://www.udemy.com/course/react-the-complete-guide-2023/",
+      "FeesDetailsLink": "Hi enquiry for React!"
+    },
+    {
+      "Sr.": "19",
+      "Image": "IMG/Node-JS-Logo.png",
+      "Course": "Node.js",
+      "Duration": "2 months",
+      "CourseDetailsLink": "https://www.freecodecamp.org/learn/nodejs/",
+      "FeesDetailsLink": "Hi enquiry for Node.js!"
+    },
+    {
+      "Sr.": "20",
+      "Image": "IMG/Docker-Logo.png",
+      "Course": "Docker",
+      "Duration": "1 month",
+      "CourseDetailsLink": "https://www.udemy.com/course/docker-the-complete-guide/",
+      "FeesDetailsLink": "Hi enquiry for Docker!"
     }
   ]
   
