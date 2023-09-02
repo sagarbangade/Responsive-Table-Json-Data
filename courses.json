@@ -17,7 +17,7 @@
     },
     {
       "Sr.": "3",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "HTML and CSS",
       "Duration": "1 month",
       "CourseDetailsLink": "https://www.freecodecamp.org/learn/responsive-web-design/",
@@ -33,7 +33,7 @@
     },
     {
       "Sr.": "5",
-      "Image": "Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "C++",
       "Duration": "1 year",
       "CourseDetailsLink": "https://www.pluralsight.com/courses/c-plus-plus-fundamentals",
@@ -41,7 +41,7 @@
     },
     {
       "Sr.": "6",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "Ruby",
       "Duration": "3 months",
       "CourseDetailsLink": "https://www.udacity.com/course/ruby-on-rails--ud386",
@@ -49,7 +49,7 @@
     },
     {
       "Sr.": "7",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "Swift",
       "Duration": "2 months",
       "CourseDetailsLink": "https://www.raywenderlich.com/182079/swift-tutorial-intro",
@@ -57,7 +57,7 @@
     },
     {
       "Sr.": "8",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "Kotlin",
       "Duration": "1 month",
       "CourseDetailsLink": "https://www.jetbrains.com/academy/learn/kotlin/",
@@ -65,7 +65,7 @@
     },
     {
       "Sr.": "9",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "R",
       "Duration": "3 months",
       "CourseDetailsLink": "https://www.coursera.org/specializations/r",
@@ -73,7 +73,7 @@
     },
     {
       "Sr.": "10",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "SQL",
       "Duration": "2 months",
       "CourseDetailsLink": "https://www.udemy.com/course/the-complete-sql-bootcamp-2023-master-sql/",
@@ -81,14 +81,14 @@
     },
     {
       "Sr.": "11",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "C#",
       "Duration": "1 month",
       "CourseDetailsLink": "https://www.pluralsight.com/courses/c-sharp-fundamentals",
       "FeesDetailsLink": "Hi enquiry for SQL!"
     },{
       "Sr.": "12",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "Go",
       "Duration": "3 months",
       "CourseDetailsLink": "https://www.coursera.org/specializations/go",
@@ -96,7 +96,7 @@
     },
     {
       "Sr.": "13",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "Rust",
       "Duration": "2 months",
       "CourseDetailsLink": "https://www.udemy.com/course/the-complete-rust-programming-course/",
@@ -104,7 +104,7 @@
     },
     {
       "Sr.": "14",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "PHP",
       "Duration": "1 month",
       "CourseDetailsLink": "https://www.freecodecamp.org/learn/php-and-laravel/",
@@ -112,7 +112,7 @@
     },
     {
       "Sr.": "15",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "Laravel",
       "Duration": "3 months",
       "CourseDetailsLink": "https://www.udemy.com/course/laravel-8-tutorial-for-beginners/",
@@ -120,7 +120,7 @@
     },
     {
       "Sr.": "16",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "Vue.js",
       "Duration": "2 months",
       "CourseDetailsLink": "https://www.udemy.com/course/vue-3-the-complete-guide-2023/",
@@ -128,7 +128,7 @@
     },
     {
       "Sr.": "17",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "Angular",
       "Duration": "1 month",
       "CourseDetailsLink": "https://www.freecodecamp.org/learn/angular/",
@@ -136,7 +136,7 @@
     },
     {
       "Sr.": "18",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "React",
       "Duration": "3 months",
       "CourseDetailsLink": "https://www.udemy.com/course/react-the-complete-guide-2023/",
@@ -144,7 +144,7 @@
     },
     {
       "Sr.": "19",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "Node.js",
       "Duration": "2 months",
       "CourseDetailsLink": "https://www.freecodecamp.org/learn/nodejs/",
@@ -152,7 +152,7 @@
     },
     {
       "Sr.": "20",
-      "Image": "IMG/Java-Logo.png",
+      "Image": "IMG/Java-Logo.jpg",
       "Course": "Docker",
       "Duration": "1 month",
       "CourseDetailsLink": "https://www.udemy.com/course/docker-the-complete-guide/",
