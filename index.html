@@ -4,153 +4,207 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Management</title>
+    <title>Asteric</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+<style>
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+table td img {
+    max-width: 100%; /* Adjust the value to control the image width */
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+
+.button {
+  display: inline-block;
+  padding: 1px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #b151e5;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px #999;
+}
+
+.button:hover {
+  background-color: #653e8e;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
 </head>
 <body>
-    <h2>Update Data</h2>
-    <label for="updateKey">Course Name: </label>
-    <input type="text" id="updateKey">
-    <label for="updateValue">New Fees Details: </label>
-    <input type="text" id="updateValue">
-    <button onclick="updateData()">Update</button>
+<h1 align="center" style="color:#b151e5;">Asterisc institute</h1>
+<h2 align="center" style="color:#000000;">Course List</h2>
 
-    <h2>Insert Data</h2>
-    <label for="insertKey">Course Name: </label>
-    <input type="text" id="insertKey">
-    <label for="insertValue">Fees Details: </label>
-    <input type="text" id="insertValue">
-    <button onclick="insertData()">Insert</button>
+<table id="courseTable">
+    <thead>
+        <tr>
+            <th scope="col" bgcolor="#b151e5">Sr.</th>
+            <th scope="col" bgcolor="#b151e5">Image</th>
+            <th scope="col" bgcolor="#b151e5">Course</th>
+            <th scope="col" bgcolor="#b151e5">Duration</th>
+            <th scope="col" bgcolor="#b151e5">Course Details</th>
+            <th scope="col" bgcolor="#b151e5">Fees</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
 
-    <h2>Delete Data</h2>
-    <label for="deleteKey">Course Name: </label>
-    <input type="text" id="deleteKey">
-    <button onclick="deleteData()">Delete</button>
+<!-- JavaScript code -->
+<script>
+// Function to fetch JSON data and populate the table
+function populateTable() {
+  fetch('courses.json') // Replace 'courses.json' with the path to your JSON file
+    .then(response => response.json())
+    .then(data => {
+      const tableBody = document.getElementById('tableBody');
 
-    <h2>Data Table</h2>
-    <table id="dataTable" border="1">
-        <thead>
-            <tr>
-                <th>Sr.</th>
-                <th>Image</th>
-                <th>Course</th>
-                <th>Duration</th>
-                <th>Course Details Link</th>
-                <th>Fees Details Link</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+      data.forEach(course => {
+        const row = tableBody.insertRow();
 
-    <script>
-        // Function to fetch JSON data from courses.json
-        async function fetchData() {
-            const response = await fetch('courses.json'); // Replace with your file path
-            const data = await response.json();
-            return data;
-        }
+        // Create table cells and populate with data
+        const serialCell = row.insertCell(0);
+        serialCell.textContent = course["Sr."];
+        serialCell.className = "old-table-class"; // Add your existing table class
+        serialCell.setAttribute('data-label', 'Sr.');
 
-        // Initialize the table with data
-        async function initializeTable() {
-            const jsonData = await fetchData();
-            const tableBody = document.querySelector("tbody");
+        const imageCell = row.insertCell(1);
+        const image = document.createElement('img');
+        image.src = course["Image"];
+        imageCell.appendChild(image);
+        imageCell.className = "old-table-class"; // Add your existing table class
+        imageCell.setAttribute('data-label', '');
 
-            jsonData.forEach(item => {
-                const row = document.createElement("tr");
-                for (const key in item) {
-                    const cell = document.createElement("td");
-                    cell.textContent = item[key];
-                    row.appendChild(cell);
-                }
-                tableBody.appendChild(row);
-            });
-        }
+        const courseCell = row.insertCell(2);
+        courseCell.textContent = course["Course"];
+        courseCell.className = "old-table-class"; // Add your existing table class
+        courseCell.setAttribute('data-label', 'Course');
 
-        initializeTable();
+        const durationCell = row.insertCell(3);
+        durationCell.textContent = course["Duration"];
+        durationCell.className = "old-table-class"; // Add your existing table class
+        durationCell.setAttribute('data-label', 'Duration');
 
-        // Function to update data
-        async function updateData() {
-            const key = document.getElementById("updateKey").value;
-            const newValue = document.getElementById("updateValue").value;
+        const courseDetailsCell = row.insertCell(4);
+        const courseDetailsLink = document.createElement('a');
+        courseDetailsLink.href = course["CourseDetailsLink"];
+        courseDetailsLink.textContent = "Download";
+        courseDetailsLink.className = "button"; // Add the button class
+        courseDetailsCell.appendChild(courseDetailsLink);
+        courseDetailsCell.setAttribute('data-label', 'Course Details');
 
-            const jsonData = await fetchData();
+        const feesCell = row.insertCell(5);
+        const feesLink = document.createElement('a');
+        feesLink.href = `https://wa.me/+917744822228?text=${encodeURIComponent(course["FeesDetailsLink"])}`;
+        feesLink.textContent = "Fees Details";
+        feesLink.className = "button"; // Add the button class
+        feesCell.appendChild(feesLink);
+        feesCell.setAttribute('data-label', 'Fees'); // Add data-label attribute
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching data: ', error);
+    });
+}
 
-            const itemToUpdate = jsonData.find(item => item["Course"] === key);
-            if (itemToUpdate) {
-                itemToUpdate["Fees Details Link"] = newValue;
+// Call the function to populate the table when the page loads
+populateTable();
 
-                // Update the JSON file (courses.json) on the server
-                await updateJsonFile(jsonData);
-
-                // Refresh the table
-                initializeTable();
-            }
-        }
-
-        // Function to insert data
-        async function insertData() {
-            const key = document.getElementById("insertKey").value;
-            const value = document.getElementById("insertValue").value;
-
-            const jsonData = await fetchData();
-
-            // Check if the course name already exists
-            const courseExists = jsonData.some(item => item["Course"] === key);
-            if (courseExists) {
-                alert("Course already exists. Use the update function to modify it.");
-                return;
-            }
-
-            // Add the new data
-            jsonData.push({
-                "Course": key,
-                "Image": "IMG/Java-Logo.jpg",
-                "Duration": "New Duration",
-                "Course Details Link": "New Link",
-                "Fees Details Link": value
-            });
-
-            // Update the JSON file (courses.json) on the server
-            await updateJsonFile(jsonData);
-
-            // Refresh the table
-            initializeTable();
-        }
-
-        // Function to delete data
-        async function deleteData() {
-            const key = document.getElementById("deleteKey").value;
-
-            const jsonData = await fetchData();
-
-            // Find the index of the item to delete
-            const indexToDelete = jsonData.findIndex(item => item["Course"] === key);
-
-            if (indexToDelete > -1) {
-                // Remove the item from the array
-                jsonData.splice(indexToDelete, 1);
-
-                // Update the JSON file (courses.json) on the server
-                await updateJsonFile(jsonData);
-
-                // Refresh the table
-                initializeTable();
-            }
-        }
-
-        // Function to update the JSON file on the server
-        async function updateJsonFile(data) {
-            const response = await fetch('update_json.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-
-            if (!response.ok) {
-                throw new Error(`Failed to update JSON file: ${response.status} ${response.statusText}`);
-            }
-        }
-    </script>
+</script>
 </body>
 </html>
