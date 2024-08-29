@@ -1,21 +1,14 @@
-# Responsive Table with JSON Data Management
+# 🌟 Responsive Table 🌟
 
-This open-source project offers a responsive table component for displaying and managing data from JSON files. You can effortlessly fetch data from a JSON file and even add new data using a dedicated page. Whether you're building a web app, dashboard, or any data-centric application, this responsive table simplifies data presentation and interaction.
+Welcome to the **Responsive Table** repository! This project showcases a dynamic table displaying various data in a user-friendly, responsive design. The table is populated with data from a JSON file and is designed to be easily accessible on both desktop and mobile devices.
 
-Key Features:
+## 🚀 Live Demo
+Check out the live demo of the project [https://sagarbangade.github.io/Responsive-Table-Json-Data/](#). 
 
-Responsive design for seamless usability on various devices.
-JSON data fetching to populate the table.
-User-friendly data addition via a separate page.
-Ideal for web development, data visualization, and more.
-Contributions are welcome! Join us in enhancing this project.
-Technologies Used:
-HTML, CSS, JavaScript, AJAX, JSON
+## 📸 Screenshots
 
-Get Started:
+### 💻 Desktop View
+![Desktop View](IMG/desktop-view.png) <!-- Replace with the actual desktop screenshot image -->
 
-Clone the repository.
-Follow the setup instructions in the README.
-Start using the responsive table in your project.
-Contribute to the project's growth by submitting pull requests and issues.
-Explore the demo and documentation for a deeper understanding. We welcome developers of all levels to contribute to this project and make it even better!"
+### 📱 Mobile View
+![Mobile View](IMG/mobile-view.png)
